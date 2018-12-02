@@ -1,4 +1,5 @@
 .App {
+    text-align: center;
     height: 100%;
     display: flex;
     flex-flow: column;
@@ -35,16 +36,16 @@
 }
 
 
-/*.tab-content {*/
-    /*border: 1px solid #dee2e6;*/
-    /*border-top: 1px solid transparent;*/
-    /*padding-bottom: 20px;*/
-/*}*/
+.tab-content {
+    border: 1px solid #dee2e6;
+    border-top: 1px solid transparent;
+    padding-bottom: 20px;
+}
 
-/*#otherpanel .row .col-sm-12 {*/
-    /*padding-top: 5px;*/
-    /*padding-bottom: 5px;*/
-/*}*/
+#otherpanel .row .col-sm-12 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 
 .col-25 {
     float: left;
