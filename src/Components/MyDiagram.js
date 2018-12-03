@@ -30,6 +30,7 @@ class MyDiagram extends React.Component {
         this.createDiagram = this.createDiagram.bind(this);
         this.modelChangeHandler = this.modelChangeHandler.bind(this);
         this.initModelHandler = this.initModelHandler.bind(this);
+        this.initDataBaseHandler = this.initDataBaseHandler.bind(this);
         this.updateColorHandler = this.updateColorHandler.bind(this);
         this.nodeSelectionHandler = this.nodeSelectionHandler.bind(this);
         this.removeNode = this.removeNode.bind(this);
@@ -87,6 +88,7 @@ class MyDiagram extends React.Component {
                     showsname={this.showsname}
                     showbirth={this.showbirth}
                     onInit={this.initModelHandler}
+                    onInitDataBase={this.initDataBaseHandler}
                     onAddNode={this.addNode}
                     onAddCancel={this.onAddCancel}
                     onEdit={this.onEdit}
@@ -107,6 +109,7 @@ class MyDiagram extends React.Component {
         ];
     }
     initDataBaseHandler(){
+        console.log("initDatabase clicked")
         var updatedTree={};
         var treePromise = read();
         var treeStuff = treePromise.then(function(tree){
@@ -114,6 +117,7 @@ class MyDiagram extends React.Component {
             //     ...this.state,
             //     tree
             // })
+
             console.log(tree);
         });
 
