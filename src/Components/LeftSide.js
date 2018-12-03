@@ -18,6 +18,7 @@ const LeftSide = ({
     showbirth,
     onInit,
     onInitDataBase,
+    onSaveDataBase,
     onAddNode,
     onAddCancel,
     onEdit,
@@ -40,6 +41,9 @@ const LeftSide = ({
             </div>
             <div className="col-sm-6">
                 <button className="col-sm-12" type="button" onClick={onInitDataBase}>Initialize Database Tree</button>
+            </div>
+            <div className="col-sm-6">
+                <button className="col-sm-12" type="button" onClick={onSaveDataBase}>Save Tree to DataBase</button>
             </div>
         </div>
         <div className="row">
