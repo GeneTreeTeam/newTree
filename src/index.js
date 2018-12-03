@@ -22,7 +22,8 @@ import FamilyTree from "./FamilyTree";
 firebaseApp.auth().onAuthStateChanged(user => {
     if(user){
         console.log('user signed in or up', user);
-        browserHistory.push('/app2');
+        if(window.location.pathname != "/tree")
+            browserHistory.push('/app2');
     } else{
         console.log('user has signed put or still needs to sign in');
         if(window.location.pathname != "/tree")
