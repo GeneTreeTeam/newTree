@@ -63,6 +63,9 @@ export default class Narbar extends Component {
                                 <NavLink to="#">Payment</NavLink>
                             </NavItem>
                             <NavItem>
+                                <a className="nav-link Ripple-parent" href="tree" >Tree</a>
+                            </NavItem>
+                            <NavItem>
                                 <Dropdown>
                                     <DropdownToggle nav caret>Others</DropdownToggle>
                                     <DropdownMenu>
