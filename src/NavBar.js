@@ -23,6 +23,7 @@ export default class Narbar extends Component {
         this.state = {
             collapse: false,
             isWideEnough: false,
+            isSignedIn: false,
         };
         this.onClick = this.onClick.bind(this);
     }
@@ -35,6 +36,7 @@ export default class Narbar extends Component {
 
     signOut() {
         firebaseApp.auth().signOut();
+
     }
 
     render() {

@@ -50,7 +50,7 @@ class MyDiagram extends React.Component {
                     {
                         key: "me",
                         label: "Me",
-                        color: "blue",
+                        color: "red",
                         fname: "Me",
                         sname: "Me",
                         birth: "1/4/1993",
