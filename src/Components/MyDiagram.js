@@ -90,7 +90,7 @@ class MyDiagram extends React.Component {
                     showbirth={this.showbirth}
                     onInit={this.initModelHandler}
                     onInitDataBase={this.initDataBaseHandler}
-                    onSaveDataBase={this.saveToDataBaseHandler()}
+                    onSaveDataBase={this.saveToDataBaseHandler}
                     onAddNode={this.addNode}
                     onAddCancel={this.onAddCancel}
                     onEdit={this.onEdit}
@@ -113,6 +113,8 @@ class MyDiagram extends React.Component {
 
     saveToDataBaseHandler(){
         console.log("save to DB clicked");
+        var model = {model:this.state.model};
+        write(model);
     }
 
     initDataBaseHandler(){

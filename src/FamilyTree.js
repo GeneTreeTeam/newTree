@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import NavBar from './NarbarFeatures'
+import NavBar from './NavBar'
 import MyDiagram from './Components/MyDiagram';
 import './FamilyTree.css';
-import {firebaseApp} from "./firebase";
-import {browserHistory} from "react-router";
-//import {read} from "./functions";
 
 class FamilyTree extends Component {
     render() {

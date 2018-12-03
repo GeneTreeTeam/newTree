@@ -26,7 +26,6 @@ firebaseApp.auth().onAuthStateChanged(user => {
             browserHistory.push('/app2');
     } else{
         console.log('user has signed out or still needs to sign in');
-        if(window.location.pathname != "/tree")
             browserHistory.replace('/app' );
     }
 })
