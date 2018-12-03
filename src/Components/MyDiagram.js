@@ -119,13 +119,15 @@ class MyDiagram extends React.Component {
         console.log("initDatabase clicked")
         var updatedTree={};
         var treePromise = read();
+        var that = this;
         var treeStuff = treePromise.then(function(tree){
-            // this.setState({
-            //     ...this.state,
-            //     tree
-            // })
+            console.log(tree['model']);
+            that.setState({
+                ...that.state,
+                model: tree['model']
+            });
 
-            console.log(tree);
+
         });
 
     }

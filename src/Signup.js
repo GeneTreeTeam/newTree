@@ -70,7 +70,7 @@ class FormsPage1 extends React.Component  {
             linkDataArray: []
         };
 
-        db().doc(email).set({
+        db().doc(email.toLowerCase()).set({
             model,
         });
     }
