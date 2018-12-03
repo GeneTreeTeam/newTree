@@ -3,7 +3,6 @@ import Carousel from './Carousel';
 import NarbarFeature from "./NarbarFeatures";
 import FooterPage from "./Footer";
 import FormsPage3 from "./Forgotpassword";
-
 class App extends Component {
 
 

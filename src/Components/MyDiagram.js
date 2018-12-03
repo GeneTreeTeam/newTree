@@ -4,7 +4,7 @@ import { ToolManager, Diagram } from 'gojs';
 import { GojsDiagram, ModelChangeEventType } from 'react-gojs';
 import './MyDiagram.css';
 import LeftSide from './LeftSide';
-
+import {read,write} from '../functions';
 class MyDiagram extends React.Component {
     nodeId = 0;
 
@@ -106,7 +106,18 @@ class MyDiagram extends React.Component {
             </div>
         ];
     }
+    initDataBaseHandler(){
+        var updatedTree={};
+        var treePromise = read();
+        var treeStuff = treePromise.then(function(tree){
+            // this.setState({
+            //     ...this.state,
+            //     tree
+            // })
+            console.log(tree);
+        });
 
+    }
     initModelHandler() {
         this.setState({
             ...this.state,
