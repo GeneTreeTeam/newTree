@@ -16,13 +16,23 @@ import {
     DropdownToggle,
    } from 'mdbreact';
 
-
+function user() {
+    console.log("In user method" + firebaseApp.auth().currentUser.email);
+    return firebaseApp.auth().currentUser;
+}
+function db() {
+    return firebaseApp.firestore().collection('users');
+}
+function entry() {
+    return db().doc(user().email);
+}
 class FormsPage1 extends React.Component  {
 
     constructor(props) {
         super(props);
         this.state = {
             modal: false,
+            name:'',
             email: '',
             password: '',
             error: {
@@ -44,17 +54,30 @@ class FormsPage1 extends React.Component  {
     }
 
     SignUp(){
-        console.log('this.state', this.state);
-        const {email, password} = this.state;
+        console.log('In Sign UP Method: The state:', this.state);
+        const {name,email, password} = this.state;
         firebaseApp.auth().createUserWithEmailAndPassword(email,password)
             .catch(error => {
                 this.setState({error})
-            })
+            });
+        console.log("This is the name and email in SignUP" + name + " " + email + " ");
+        var model= {
+            nodeDataArray: [
+                {
+                    key:"node0",label:name,color:"red"
+                }
+            ],
+            linkDataArray: []
+        };
+
+        db().doc(email).set({
+            model,
+        });
     }
 
     render() {
         return(
-            <Container onClick={this.toggle}>
+            <Container>
                 <Row>
                     <Col md="0">
                         <Button color="info"  onClick={this.toggle}>Sign Up <i className="fa fa-user-plus mr-1"></i></Button>
@@ -68,8 +91,10 @@ class FormsPage1 extends React.Component  {
                             </div>
 
                             <ModalBody className="grey-text">
-                                <Input size="sm" label="Your name" icon="user" group type="text"
-                                       validate error="wrong" success="right"/>
+                                <Input size="sm" label="Your name" icon="user" group type="name"
+                                       validate error="wrong" success="right"
+                                       onChange ={event => this.setState({name: event.target.value})}
+                                />
                                 <Input size="sm" label="Your email" icon="envelope" group type="email"
                                        validate error="wrong" success="right"
                                        onChange ={event => this.setState({email: event.target.value})}
