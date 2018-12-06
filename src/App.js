@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Carousel from './Carousel';
-import NarbarFeature from "./NarbarFeatures";
-import FooterPage from "./Footer";
-import FormsPage3 from "./Forgotpassword";
+import Carousel from './Components/GUI Components/Carousel';
+import NarbarFeature from "./Components/GUI Components/NarbarFeatures";
+import FooterPage from "./Components/GUI Components/Footer";
+import FormsPage3 from "./Components/Signin Components/Forgotpassword";
 class App extends Component {
 
 

@@ -5,19 +5,19 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import{ firebaseApp } from './firebase';
+import{ firebaseApp } from './Components/Signin Components/firebase';
 
-import FormsPage1 from './Signup';
-import FormsPage2 from './Login';
+import FormsPage1 from './Components/Signin Components/Signup';
+import FormsPage2 from './Components/Signin Components/Login';
 
 import "font-awesome/css/font-awesome.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 
 import{Router, Route, browserHistory} from 'react-router';
-import AppAfterSignIn from "./AppAfterSignIn";
+import AppAfterSignIn from "./Components/Signin Components/AppAfterSignIn";
 
-import FamilyTree from "./FamilyTree";
+import FamilyTree from "./Components/FamilyTree";
 
 firebaseApp.auth().onAuthStateChanged(user => {
     if(user){
