@@ -27,17 +27,15 @@ class FooterPagePro extends React.Component {
                                 style={{ width: "60px" }}
                             />
                             <p>
-                                <a href="#!">GeneTree 1</a>
+                                <a href="#!">GeneTree</a>
                             </p>
                             <p>
-                                <a href="#!">GeneTree 2</a>
+                                <a href="#!">Payments</a>
                             </p>
                             <p>
-                                <a href="#!">GeneTree 3</a>
+                                <a href="#!">Analytics</a>
                             </p>
-                            <p>
-                                <a href="#!">GeneTree 4</a>
-                            </p>
+
                         </Col>
                         <hr className="w-100 clearfix d-md-none" />
                         <Col md="3" lg="2" xl="2" className="mx-auto mt-3">
@@ -75,13 +73,13 @@ class FooterPagePro extends React.Component {
                                 <i className="fa fa-home mr-3" /> California, CA 95112, US
                             </p>
                             <p>
-                                <i className="fa fa-envelope mr-3" /> contact@genetree.com
+                                <i className="fa fa-envelope mr-3" /> genetree133@gmail.com
                             </p>
                             <p>
-                                <i className="fa fa-phone mr-3" /> + 01 234 567 88
+                                <i className="fa fa-phone mr-3" /> (323)740-2008
                             </p>
                             <p>
-                                <i className="fa fa-print mr-3" /> + 01 234 567 89
+                                <i className="fa fa-print mr-3" /> (987)654-3210
                             </p>
                         </Col>
                     </Row>
@@ -118,7 +116,7 @@ class FooterPagePro extends React.Component {
                 <div className="footer-copyright text-center py-3">
                     <Container fluid>
                         &copy; {new Date().getFullYear()} Copyright:{" "}
-                        <a href="https://www.GeneTree.com"> GeneTree.com </a>
+                        <a href=''> GeneTree.com </a>
                     </Container>
                 </div>
             </Footer>

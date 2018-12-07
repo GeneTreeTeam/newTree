@@ -52,7 +52,7 @@ class MyDiagram extends React.Component {
                     {
                         key: "me",
                         label: "Me",
-                        color: "red",
+                        color: "#FDAD50",
                         fname: "Me",
                         sname: "Me",
                         birth: "1/4/1993",
@@ -139,8 +139,8 @@ class MyDiagram extends React.Component {
             model: {
                 nodeDataArray: [{
                     key: "me",
-                    label: "Me Me",
-                    color: "blue",
+                    label: "Me",
+                    color: "#FDAD50",
                     fname: "Me",
                     sname: "Me",
                     birth: "1/4/1993",
@@ -150,7 +150,7 @@ class MyDiagram extends React.Component {
                 },
                     {
                         key: "mother",
-                        label: "Mother Mom",
+                        label: "Mother",
                         color: "pink",
                         fname: "Mother",
                         sname: "Mom",
@@ -161,8 +161,8 @@ class MyDiagram extends React.Component {
                     },
                     {
                         key: "father",
-                        label: "Father Dad",
-                        color: "blue",
+                        label: "Father",
+                        color: "#33DAFF",
                         fname: "Father",
                         sname: "Dad",
                         birth: "1/4/1993",
@@ -184,7 +184,7 @@ class MyDiagram extends React.Component {
                     {
                         key: "grandfamom",
                         label: "Grandfather Mom",
-                        color: "blue",
+                        color: "#33DAFF",
                         fname: "Grandfather",
                         sname: "Mom",
                         birth: "1/4/1993",
@@ -206,7 +206,7 @@ class MyDiagram extends React.Component {
                     {
                         key: "grandfadad",
                         label: "Grandfather Dad",
-                        color: "blue",
+                        color: "#33DAFF",
                         fname: "Grandfather",
                         sname: "Dad",
                         birth: "1/4/1993",
@@ -329,7 +329,7 @@ class MyDiagram extends React.Component {
                             {
                                 key: newNodeId,
                                 label: newNodeName,
-                                color: gender == "female" ? "pink" : (gender == "male" ? "blue" : "yellow"),
+                                color: gender == "female" ? "pink" : (gender == "male" ? "#33DAFF" : "yellow"),
                                 fname: fname,
                                 sname: sname,
                                 birth: this.birth.current.value,
@@ -349,7 +349,7 @@ class MyDiagram extends React.Component {
                 this.state.model.nodeDataArray[selectedIndex] = {
                     key: this.selectedNodeKey,
                     label: newNodeName,
-                    color: gender == "female" ? "pink" : (gender == "male" ? "blue" : "yellow"),
+                    color: gender == "female" ? "pink" : (gender == "male" ? "#33DAFF" : "yellow"),
                     fname: fname,
                     sname: sname,
                     birth: this.birth.current.value,

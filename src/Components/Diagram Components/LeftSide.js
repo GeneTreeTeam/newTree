@@ -30,12 +30,7 @@ const LeftSide = ({
     <div className="col-sm-4">
 
         <div className="row">
-            <div className="col-sm-6">
-                <button className="col-sm-12" type="button" onClick={onAddParent}>Add Parent</button>
-            </div>
-            <div className="col-sm-6">
-                <button className="col-sm-12" type="button" onClick={onAddChild}>Add Child</button>
-            </div>
+
             <div className="col-sm-6">
                 <button className="col-sm-12" type="button" onClick={onInit}>Initialize sample Tree</button>
             </div>
@@ -54,15 +49,15 @@ const LeftSide = ({
             <li className="nav-item">
                 <a className="nav-link active" data-toggle="tab" href="#personal">Personal</a>
             </li>
-            <li className="nav-item">
-                <a className="nav-link" data-toggle="tab" href="#partners">Partners</a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" data-toggle="tab" href="#contact">Contact</a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" data-toggle="tab" href="#biographical">Biographical</a>
-            </li>
+            {/*<li className="nav-item">*/}
+                {/*<a className="nav-link" data-toggle="tab" href="#partners">Partners</a>*/}
+            {/*</li>*/}
+            {/*<li className="nav-item">*/}
+                {/*<a className="nav-link" data-toggle="tab" href="#contact">Contact</a>*/}
+            {/*</li>*/}
+            {/*<li className="nav-item">*/}
+                {/*<a className="nav-link" data-toggle="tab" href="#biographical">Biographical</a>*/}
+            {/*</li>*/}
         </ul>
 
         <div className="tab-content">
@@ -78,7 +73,7 @@ const LeftSide = ({
                     </div>
                     <div className="row">
                         <div className="col-25">
-                            <label htmlFor="sname" className="label">Surname now:</label>
+                            <label htmlFor="sname" className="label">Lastname</label>
                         </div>
                         <div className="col-75">
                             <input type="text" className="x" id="sname" name="surname" ref={sname} placeholder=""/>
@@ -122,6 +117,14 @@ const LeftSide = ({
                                 <label><input type="checkbox" value=""ref={living}/>This personal is living</label>
                             </div>
                         </div>
+                    </div>
+                    <div className="row">
+                    <div className="col-sm-6">
+                        <button className="col-sm-12" type="button" onClick={onAddParent}>Add Parent</button>
+                    </div>
+                    <div className="col-sm-6">
+                        <button className="col-sm-12" type="button" onClick={onAddChild}>Add Child</button>
+                    </div>
                     </div>
                     <div className="row">
                         <div className="col-sm-12">
@@ -171,17 +174,17 @@ const LeftSide = ({
                 </div>
             </div>
 
-            <div id="partners" className="container tab-pane fade">
-                <h3>Partners</h3>
-            </div>
+            {/*<div id="partners" className="container tab-pane fade">*/}
+                {/*<h3>Partners</h3>*/}
+            {/*</div>*/}
 
-            <div id="contact" className="container tab-pane fade">
-                <h3>Contact</h3>
-            </div>
+            {/*<div id="contact" className="container tab-pane fade">*/}
+                {/*<h3>Contact</h3>*/}
+            {/*</div>*/}
 
-            <div id="biographical" className="container tab-pane fade">
-                <h3>Biographical</h3>
-            </div>
+            {/*<div id="biographical" className="container tab-pane fade">*/}
+                {/*<h3>Biographical</h3>*/}
+            {/*</div>*/}
         </div>
     </div>
 )

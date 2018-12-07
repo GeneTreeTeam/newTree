@@ -15,7 +15,7 @@ import {
 
 import { BrowserRouter as Router } from 'react-router-dom';
 import {firebaseApp} from "../Signin Components/firebase";
-
+import Logo1 from '../../assets/logo1.png'
 
 export default class Narbar extends Component {
     constructor(props) {
@@ -45,7 +45,7 @@ export default class Narbar extends Component {
                 <Navbar color="unique-color-dark" dark expand="md" scrolling>
 
                     <NavbarBrand href="/">
-                        <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png"  height="30" className="d-inline-block align-top"/>
+                        <img src={Logo1}  height="30" className="d-inline-block align-top"/>
                         <strong>GeneTree</strong>
                     </NavbarBrand>
 
